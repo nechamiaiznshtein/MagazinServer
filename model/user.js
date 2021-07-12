@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose')
 
 const UserSchema = mongoose.Schema({
@@ -17,9 +16,9 @@ const UserSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    pictures: [{
+    magazines: [{
         type: mongoose.Types.ObjectId,
-        ref: 'Picture'
+        ref: 'Magazin'
     }]
 })
 
