@@ -12,5 +12,4 @@ const addMagazin = (req, res) => {
 }
 
 
-
 module.exports = { addMagazin }
