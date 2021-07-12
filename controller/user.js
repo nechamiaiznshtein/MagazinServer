@@ -1,13 +1,17 @@
-const user = require("../model/user")
+const user = require("../model/user");
 
-
-const addUSer = (req, res) => {
-    console.log("body", req.body);
-    const newUser = new user(req.body);
-    newUser.save().then((user) => {
-        res.json({ newUser: user })
-    }).catch((err) => { console.log(err); })
+const addUser = (req, res) => {
+    const newUser = new user(req.body)
+    newUser.save()
+        .then(newUser => res.json(newUser))
+        .catch(err => res.send(err))
 }
 
+const removeUser = (req, res) => {
+    //delete the user's magazines & post
+    user.findByIdAndDelete(req.params.userId)
+        .then(res.send('the user was removed!'))
+        .catch(err => res.send(err))
+}
 
-module.exports = { addUSer }
+module.exports = { removeUser, addUser }
