@@ -1,4 +1,3 @@
-// const { models } = require("mongoose");
 const user = require("../model/user")
 
 

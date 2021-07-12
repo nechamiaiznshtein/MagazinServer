@@ -9,8 +9,8 @@ const cors = require('cors');
 app.use(cors());
 dotenv.config();
 
-app.listen(8080, (req, res) => {
-    console.log("listen!!!!");
+app.listen(4000, (req, res) => {
+    console.log("listen in port 4000");
 
 })
 
@@ -20,11 +20,10 @@ const connectionParams = {
     useUnifiedTopology: true
 }
 
-mongoose.connect(process.env.CONNECT_DB, connectionParams).
+mongoose.connect(process.env.DB_CONNECT, connectionParams).
     then(() => {
-        console.log('connect!!!');
-    }).
-    catch((err) => { console.log(err); })
+        console.log('connect');
+    }).catch((err) => { console.log(`not connect ${err}`); })
 
 
 app.use('/', router)
