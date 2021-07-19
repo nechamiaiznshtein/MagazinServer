@@ -12,4 +12,14 @@ const addMagazin = (req, res) => {
 }
 
 
-module.exports = { addMagazin }
+const getAllMagazins = (req, res) => {
+    Magazin.find().then((magazins) => {
+        res.status(200).json({ allTheMagazins: magazins })
+    }).catch((err) => {
+        console.log(`error in getAllMagazin: ${err}`);
+        res.status(400).send(err.message)
+    })
+}
+
+
+module.exports = { addMagazin, getAllMagazins }

@@ -6,6 +6,7 @@ const magazin = require('../controller/magazin');
 
 //magazin
 router.post('/addMagazin', magazin.addMagazin)
+router.get('/getAllMagazins', magazin.getAllMagazins)
 
 
 
