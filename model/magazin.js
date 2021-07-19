@@ -18,7 +18,11 @@ const magazinSchema = mongoose.Schema({
     posts: [{
         type: mongoose.Types.ObjectId,
         ref: 'Post'
-    }]
+    }],
+    userId: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 module.exports = mongoose.model('Magazin', magazinSchema);
