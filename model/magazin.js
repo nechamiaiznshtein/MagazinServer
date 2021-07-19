@@ -5,7 +5,10 @@ const magazinSchema = mongoose.Schema({
     title: {
         type: String
     },
-    description: {
+    subTitle: {
+        type: String
+    },
+    context: {
         type: String
     },
     image: {
