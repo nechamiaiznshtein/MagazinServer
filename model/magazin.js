@@ -8,7 +8,7 @@ const magazinSchema = mongoose.Schema({
     subTitle: {
         type: String
     },
-    context: {
+    content: {
         type: String
     },
     image: {
