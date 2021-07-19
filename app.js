@@ -11,7 +11,6 @@ dotenv.config();
 
 app.listen(4000, (req, res) => {
     console.log("listen in port 4000");
-
 })
 
 const connectionParams = {
